@@ -4,6 +4,7 @@
   "description": "Simple app for booking the seats in train",
   "main": "app.js",
   "scripts": {
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "sumit kumar",
