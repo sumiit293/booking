@@ -27,6 +27,10 @@ app.use("/api/coach", coach);
 const booking = require("./routes/api/Booking");
 app.use("/api/booking", booking);
 
+app.get("/",(req,res)=>{
+    res.json({Message: "Hello there !"});
+})
+
 
 
 
