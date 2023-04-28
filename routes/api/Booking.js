@@ -38,7 +38,6 @@ router.get("/reset", async (req, res) => {
                     isAvailable: true
                 })
             }
-            
         }
         res.status(200).json((await Seat.find()));
     } catch (error) {
