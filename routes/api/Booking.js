@@ -33,6 +33,7 @@ router.get("/reset", async (req, res) => {
     try {
         const listOfSeat = await Seat.find();
         for(const seat of listOfSeat){
+            if(seat.isAvailable) continue;
             await Seat.findByIdAndUpdate(seat._id,{
                 isAvailable: true
             })
