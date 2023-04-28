@@ -59,7 +59,9 @@ router.post("/", async (req, res) => {
         },0);
         const sortedSeatList = listOfSeat.sort((a,b)=>a.number - b.number);
         if(remainingSeat < numOfSeat){
-            res.status(400).json({error: "Seat not available ."});
+            res.status(400).json({error: "Insufficient seats available !"});
+        }else if(numOfSeat >= 8){
+            res.status(400).json({error: "Max of 7 seat per user only !"});
         }else{
             let count = numOfSeat;
             for(let seat of sortedSeatList){
